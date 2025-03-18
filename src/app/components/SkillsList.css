@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url('/font/CaviarDreams.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.skills-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'CaviarDreams', sans-serif; /* Applying local font */
+}
+
+.skills-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: sans-serif; /* Use normal font for heading */
+  font-weight: bold; /* Make heading bold */
+  transition: color 0.3s; /* Add transition for smooth color change */
+}
+
+body.dark .skills-container h2 {
+  color: white; /* Dark theme color */
+}
+
+body.light .skills-container h2 {
+  color: black; /* Light theme color */
+}
+
+.skills-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-container li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  opacity: 0;
+  transition: color 0.3s; /* Add transition for smooth color change */
+}
+
+body.dark .skills-container li {
+  color: white; /* Dark theme color */
+}
+
+body.light .skills-container li {
+  color: black; /* Light theme color */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.skills-container li:nth-child(5n+1) {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.skills-container li:nth-child(5n+2) {
+  animation: slideIn 1s ease-out forwards;
+}
+
+.skills-container li:nth-child(5n+3) {
+  animation: zoomIn 1s ease-out forwards;
+}
+
+.skills-container li:nth-child(5n+4) {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.skills-container li:nth-child(5n+5) {
+  animation: slideIn 1s ease-out forwards;
+}

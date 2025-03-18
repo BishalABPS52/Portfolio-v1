@@ -1,0 +1,19 @@
+/* src/components/footer/footer.css */
+.footer {
+    background-color: #121212;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .footer a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #ff0000; /* Red on hover */
+  }
+  

@@ -1,0 +1,137 @@
+/* Add your custom styles for the ideas page here */
+
+.idea-list {
+  list-style-type: decimal;
+  list-style-position: inside;
+  color: #ffffff;
+}
+
+.idea-item {
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: #2d3748;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.idea-item:hover {
+  background-color: #4a5568;
+}
+
+.idea-link {
+  color: #ecc94b;
+  transition: color 0.3s;
+}
+
+.idea-link:hover {
+  color: #d69e2e;
+  text-decoration: underline;
+}
+
+.idea-index {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #4a5568;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Light mode styles */
+body.light .idea-item {
+  background-color: #ffffff;
+  border: 1px solid #0000ff;
+}
+
+body.light .idea-link {
+  color: #0000ff;
+}
+
+body.light .idea-link:hover {
+  color: #0000cc;
+}
+
+/* Dark mode styles */
+body.dark .idea-item {
+  background-color: #000000;
+  border: 1px solid #ff0000;
+}
+
+body.dark .idea-link {
+  color: #ff0000;
+}
+
+body.dark .idea-link:hover {
+  color: #cc0000;
+}
+
+.table-container {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Align table width with navbar */
+}
+
+.table-header {
+  font-size: 2rem; /* Increase font size by 2x */
+}
+
+.table-row {
+  font-size: 2rem; /* Increase font size by 2x */
+}
+
+.table-cell {
+  padding: 32px; /* Adjust cell padding */
+}
+
+.table-cell a {
+  transition: color 0.3s;
+}
+
+/* Light mode styles */
+body.light .table-container {
+  background-color: #ffffff;
+}
+body.light .table-header {
+  background-color: #ffffff;
+  color: #000000;
+  border-bottom: 2px solid #0000ff;
+}
+body.light .table-row {
+  border-bottom: 1px solid #0000ff;
+}
+body.light .table-cell {
+  color: #000000;
+}
+body.light .table-cell a {
+  color: #0000ff;
+}
+body.light .table-cell a:hover {
+  color: #0000cc;
+  text-decoration: underline;
+}
+
+/* Dark mode styles */
+body.dark .table-container {
+  background-color: #000000;
+}
+body.dark .table-header {
+  background-color: #000000;
+  color: #ffffff;
+  border-bottom: 2px solid #ff0000;
+}
+body.dark .table-row {
+  border-bottom: 1px solid #ff0000;
+}
+body.dark .table-cell {
+  color: #ffffff;
+}
+body.dark .table-cell a {
+  color: #ff0000;
+}
+body.dark .table-cell a:hover {
+  color: #cc0000;
+  text-decoration: underline;
+}

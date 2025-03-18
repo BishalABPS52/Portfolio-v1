@@ -1,0 +1,513 @@
+/* Global Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  cursor: default; /* Restore the default cursor */
+  color: var(--text-color);
+}
+
+/* Dark mode body */
+body.dark {
+  background-color: #2e2e2e; /* Charcoal black */
+  color: var(--text-color-dark); /* White text in dark mode */
+}
+
+/* Light mode body */
+body.light {
+  background-color: #f5f5f5; /* Creamy white */
+  color: var(--text-color-light); /* Black text in light mode */
+}
+
+/* Falling stars: White in dark mode, black in light mode */
+.falling-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.falling-stars .star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #fff; /* Default white for stars */
+  animation: fall 2s linear infinite;
+}
+
+body.light .falling-stars .star {
+  background-color: #333; /* Stars become black in light mode */
+}
+
+@keyframes fall {
+  from {
+    top: -10px;
+    opacity: 0;
+  }
+  to {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* General text color */
+body.dark .js, 
+body.dark .block,
+body.dark p, 
+body.dark h1, 
+body.dark h2, 
+body.dark h3, 
+body.dark h4, 
+body.dark h5, 
+body.dark h6 {
+  color: var(--text-color-dark); /* White text in dark mode */
+}
+
+body.light .js, 
+body.light .block,
+body.light p, 
+body.light h1, 
+body.light h2, 
+body.light h3, 
+body.light h4, 
+body.light h5, 
+body.light h6 {
+  color: var(--text-color-light); /* Black text in light mode */
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .block {
+    padding: 1rem;
+  }
+
+  .block-heading {
+    font-size: 1.5rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+  }
+
+  .w-48, .h-48 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gap-32 {
+    gap: 16px;
+  }
+
+  .gap-16 {
+    gap: 8px;
+  }
+
+  .mt-4 {
+    margin-top: 1rem;
+  }
+
+  .mt-8 {
+    margin-top: 2rem;
+  }
+
+  .mt-20 {
+    margin-top: 5rem;
+  }
+
+  .pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .p-8 {
+    padding: 2rem;
+  }
+
+  .p-4 {
+    padding: 1rem;
+  }
+
+  .sm\:p-20 {
+    padding: 5rem;
+  }
+
+  .sm\:text-left {
+    text-align: left;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+  }
+
+  .sm\:mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .sm\:text-left {
+    text-align: left;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+  }
+}
+
+/* Add responsiveness for larger screens */
+@media (min-width: 769px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* Add a background animation for the entire page */
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-bg {
+  background-size: 400% 400%;
+  animation: bgAnimation 15s ease infinite;
+}
+
+/* 1x1 Grid Layout for Blocks */
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* One column layout */
+  grid-gap: 10px; /* Maintain gap between blocks */
+  width: 80%;
+  margin: 0 auto;
+  justify-items: start; /* Align blocks to the leftmost part */
+  text-align: left; /* Ensure text starts at the left */
+}
+
+/* Block Styles */
+.block {
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.5s ease, background-color 0.3s ease;
+  width: 100%; /* Full width */
+  margin-bottom: 15px; /* Add gap between blocks */
+  margin-right: 150px;
+  margin-left: 0px; /* Move blocks to the left by 120px */ /* Ensure text starts at the left */
+}
+
+.block-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(9, 7, 7);
+}
+
+/* Light mode blocks */
+body.light .block {
+  background-color: #f1f1f1; /* Creamy white */
+  border: 5px solid #0183a0; /* Sky blue */
+  color: #181212; /* Dark text */
+}
+
+/* Dark mode blocks */
+body.dark .block {
+  background-color: #2e2e2e; /* Charcoal black */
+  border: 5px solid crimson; /* Crimson red */
+  color: white;
+}
+
+/* Falling stars effect inside blocks */
+.falling-stars div {
+  position: absolute;
+  background-color: white;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.8);
+  animation: fall 5s linear infinite;
+}
+
+/* Chat window styles */
+.chat-window {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 20rem;
+  height: 24rem;
+  background-color: var(--chat-bg-color);
+  border: 1px solid var(--chat-border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  resize: both;
+  overflow: hidden;
+  color: var(--text-color);
+}
+
+.chat-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--chat-border-color);
+}
+
+.chat-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 0.5rem;
+}
+
+.chat-message-user {
+  text-align: right;
+}
+
+.chat-message-developer {
+  text-align: left;
+}
+
+.chat-bubble {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.chat-bubble-user {
+  background-color: #3b82f6;
+  color: var(--text-color);
+}
+
+.chat-bubble-developer {
+  background-color: #09348b;
+  color: var(--text-color);
+}
+
+.chat-input-container {
+  padding: 1rem;
+  border-top: 1px solid var(--chat-border-color);
+  display: flex;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--chat-border-color);
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  color: var(--text-color);
+}
+
+.chat-send-button {
+  padding: 0.5rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.resizer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: #6b7280;
+  cursor: se-resize;
+}
+
+.chat-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--chat-close-button-color);
+}
+
+body.light {
+  --chat-bg-color: white;
+  --chat-border-color: blue;
+  --chat-close-button-color: #6b7280;
+}
+
+body.dark {
+  --chat-bg-color: grey;
+  --chat-border-color: red;
+  --chat-close-button-color: #d1d5db;
+}
+
+/* Increase font size of username */
+.username {
+  font-size: 30px; /* Adjust the value as needed */
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .chat-window {
+    background-color: #1f2937; /* Dark mode background */
+    border-color: #374151;
+  }
+
+  .chat-header {
+    border-bottom-color: #374151;
+  }
+
+  .chat-title {
+    color: white; /* Dark mode text color */
+  }
+
+  .chat-bubble-user {
+    background-color: #3b82f6;
+    color: white; /* Dark mode text color */
+  }
+
+  .chat-bubble-developer {
+    background-color: #374151; /* Dark mode background */
+    color: white; /* Dark mode text color */
+  }
+
+  .chat-input-container {
+    border-top-color: #374151;
+  }
+
+  .chat-input {
+    border-color: #374151;
+    color: white; /* Dark mode text color */
+  }
+
+  .chat-send-button {
+    background-color: #3b82f6;
+    color: white; /* Dark mode text color */
+  }
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-tertiary {
+  color: var(--tertiary-color);
+}
+
+.text-quaternary {
+  color: var(--quaternary-color);
+}
+
+body.light .text-details {
+  color: black;
+}
+
+body.dark .text-details {
+  color: white;
+}
+
+.border-accent {
+  border-color: var(--accent-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+/* Define your theme colors in :root or use a preprocessor like SASS/LESS to manage theme variables */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #d74012;
+  --tertiary-color: #cccccc;
+  --quaternary-color: #00cc00;
+  --quinary-color: #999999;
+  --accent-color: #ff0000;
+  --details-color: #999999; /* Default color for details */
+  --text-color-light: black; /* Text color for light mode */
+  --text-color-dark: white; /* Text color for dark mode */
+}
+
+body.light {
+  --text-color: var(--text-color-light);
+}
+
+body.dark {
+  --text-color: var(--text-color-dark);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tech-badge img {
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  object-fit: contain; /* Ensure the image fits within the specified dimensions */
+  animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}

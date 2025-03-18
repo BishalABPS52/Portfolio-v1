@@ -1,0 +1,101 @@
+/* Remove the test style */
+body {
+    font-family: Arial, sans-serif;
+    text-align: left; /* Overall alignment */
+}
+
+.container {
+    max-width: 800px;
+    margin: 10px auto; /* Center align container */
+    padding: 20px; /* Padding inside container */
+}
+
+h1 {
+    color: skyblue;
+    font-size: 48px;
+    margin-bottom: 10px; /* Space below heading */
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    color: skyblue;
+    font-size: 32px;
+    margin-bottom: 10px; /* Space below heading */
+}
+
+h3 {
+    color: skyblue;
+    font-size: 24px;
+    margin-bottom: 10px; /* Space below heading */
+}
+
+p {
+    color: var(--paragraph-color);
+    font-size: inherit; /* Inherited from body */
+    /* text-indent: 20px; */ /* Uncomment if text indentation is needed */
+}
+
+.contact-info {
+    color: var(--paragraph-color);
+}
+
+.section {
+    margin-bottom: 20px; /* Space between sections */
+}
+
+ul {
+    list-style-type: disc; /* List items with bullets */
+    padding-left: 20px; /* Left-aligned list items */
+    padding: 0; /* Removes default list padding */
+    list-style: none; /* Removes default list style */
+}
+
+ul li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: rgb(37, 64, 217);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.download-button:hover {
+    background-color: rgb(227, 60, 30);
+}
+
+body.light .resume-block{
+    border: 6px solid #0183a0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+body.dark .resume-block{
+  border: 4px solid #c13131;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paragraph-color: black;
+    }
+    h1, p {
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --paragraph-color: white;
+    }
+    h1, p {
+        color: white;
+    }
+}

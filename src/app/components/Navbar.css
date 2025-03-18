@@ -1,0 +1,204 @@
+/* Importing Knight Warrior Font Locally */
+@font-face {
+  font-family: 'CaviarDreamsB';
+  src: url('/font/CaviarDreams_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  transition: background-color 0.3s ease;
+}
+
+body.dark {
+  background-color: #363535;
+  color: white;
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* Increased navbar size by 100% */
+  width: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, border 0.3s;
+  font-family: 'CaviarDreamsB', sans-serif; /* Ensure this matches the @font-face rule */
+}
+
+.navbar-container.dark {
+  background-color: #2e2e2e;
+  border: 2px solid crimson;
+}
+
+.navbar-container.light {
+  background-color: white;
+  border: 6px solid #0183a0;
+}
+
+.navbar-container ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-container li {
+  list-style-type: none;
+  margin-right: 4px; /* Space between blocks */
+  font-size: 36px; /* Increased font size by 100% */
+  transition: all 0.3s;
+  display: inline-block;
+  border: 2px solid transparent;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%; /* Make sure the items fit nicely inside blocks */
+}
+
+.navbar-container a {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-container li:hover a {
+  background-color: #8dbcee; /* Change hover color to blue */
+  color: #f0f0f0;
+}
+
+/* Dark mode styling for text */
+.navbar-container.dark li a {
+  color: white;
+}
+
+.navbar-container.light li a {
+  color: rgb(63, 63, 63);
+}
+
+.navbar-container .dark-light-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 80px 160px; 
+  font-size: 128px; 
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-container .dark-light-btn:hover {
+  background-color: #cb1d1d;
+}
+
+.navbar-container .dark-light-btn:focus {
+  outline: none;
+}
+
+.switch {
+  width: 50px;
+  height: 25px;
+  background-color: #373535;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.switch:hover {
+  background-color: #caa2a2;
+}
+
+.switch .slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sun-moon svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark .switch {
+  background-color: #333;
+}
+
+.light .switch {
+  background-color: #ccc;
+}
+
+.dash-icon-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.dash-icon {
+  font-size: 36px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.options-menu {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  background-color: grey; /* Ensure background color is grey */
+  border-radius: 10px; /* Ensure rectangular shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 240px; /* Increase width by another 2x */
+  height: auto; /* Adjust height to fit content */
+}
+
+.options-menu.light {
+  background-color: #f5f5f5; /* Light mode background */
+  color: black; /* Light mode text color */
+}
+
+.options-menu.dark {
+  background-color: #2e2e2e; /* Dark mode background */
+  color: white; /* Dark mode text color */
+}
+
+.options-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+}
+
+.options-menu li {
+  padding: 8px 16px;
+  font-size: 32px; /* Increased font size by 2x */
+}
+
+.options-menu li a {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none;
+  display: block; /* Ensure the hover effect covers the entire option */
+}
+
+.options-menu li:hover {
+  background-color: #444;
+}
+

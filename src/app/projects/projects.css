@@ -1,0 +1,137 @@
+/* src/app/projects/projects.css */
+.projects-section {
+    background-color: #444;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+  
+  .projects-section h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .projects-section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  .projects-section .project-card {
+    background-color: #333;
+    padding: 40px; /* Increase padding by 2x */
+    border-radius: 8px;
+    margin-bottom: 20px; /* Separate each block by 20px */
+    width: 600px; /* Adjust width for 2:3 ratio */
+    height: 00px; /* Adjust height for 2:3 ratio */
+    margin: 20px 10px; /* Add margin to the right and left */
+  }
+  
+  .projects-section .project-card h2 {
+    font-size: 1.8rem;
+    color: #fff;
+  }
+  
+  .projects-section .project-card p {
+    font-size: 1rem;
+    color: #bbb;
+  }
+  
+  .projects-section .project-card a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #38bdf8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+  }
+  
+  .projects-section .project-card a:hover {
+    background-color: #ff0000; /* Red on hover */
+  }
+
+.project-card {
+  width: 600px; /* Adjust width for 2:3 ratio */
+  height: 900px; /* Adjust height for 2:3 ratio */
+  margin: 20px 10px; /* Add margin to the right and left */
+  border: 2px solid transparent; /* Default border */
+}
+
+.border-light {
+  border-color: #38bdf8; /* Light theme border color */
+}
+
+.border-dark {
+  border-color: #ff0000; /* Dark theme border color */
+}
+
+.creative-section {
+  background-color: #444;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.creative-section h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.creative-section p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.creative-section .creative-card {
+  background-color: #333;
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 600px;
+  height: 900px;
+  margin: 20px 10px;
+  border: 2px solid transparent;
+}
+
+.creative-section .creative-card h2 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.creative-section .creative-card p {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.creative-section .creative-card a {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #38bdf8;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+.creative-section .creative-card a:hover {
+  background-color: #ff0000;
+}
+
+.creative-card {
+  width: 600px;
+  height: 900px;
+  margin: 20px 10px;
+  border: 2px solid transparent;
+}
+
+.border-light {
+  border-color: #38bdf8;
+}
+
+.border-dark {
+  border-color: #ff0000;
+}
