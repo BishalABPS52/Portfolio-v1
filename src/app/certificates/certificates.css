@@ -1,6 +1,6 @@
 :root {
-  --light-theme-bg: #ffffff; /* Change to white */
-  --dark-theme-bg: #2d2b2b; /* Change to grey */
+  --light-theme-bg: #ffffff;
+  --dark-theme-bg: #2d2b2b; 
   --light-theme-color: #333;
   --dark-theme-color: #f9f9f9;
 }
