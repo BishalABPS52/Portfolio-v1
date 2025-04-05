@@ -11,7 +11,7 @@ export default function Page() {
                 
                 <div className="section">
                     <h2>About Me</h2>
-                    <p>Versatile and results-driven developer specializing in web and software development, game testing, and backend solutions...</p>
+                    <p>Versatile and results-driven developer specializing in web and software development, game testing, and backend solutions.</p>
                 </div>
                 
                 <div className="section">
