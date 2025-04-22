@@ -56,7 +56,7 @@ body.light {
 }
 
 body.light .falling-stars .star {
-  background-color: #333; /* Stars become black in light mode */
+  background-color: #333; 
 }
 
 @keyframes fall {
@@ -93,7 +93,7 @@ body.dark h3,
 body.dark h4, 
 body.dark h5, 
 body.dark h6 {
-  color: var(--text-color-dark); /* White text in dark mode */
+  color: var(--text-color-dark); 
 }
 
 body.light .js, 
