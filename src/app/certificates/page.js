@@ -7,7 +7,7 @@ import './certificates.css';
 const certificates = [
   { title: "Googling Competition", image: "/images/certificates/c1.png" },
   { title: "CCRC Scientific Circle", image: "/images/certificates/c2.jpg" },
- 
+  { title: "Math Quiz", image: "/images/certificates/c3.jpg" },
   { title: "Online Global Quiz", image: "/images/certificates/c4.jpg" },
 ];
 
